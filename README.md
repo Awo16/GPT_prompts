@@ -11,8 +11,8 @@
 
    The program can also generate speech-to-text and text-to-speech responses allowing user to interact with the chat bot via voice. This feature is has a built-in or default voice interface, however the program has support for users who want to create custom voice responses using [__ElevenLabs API__](https://beta.elevenlabs.io).
 
-   Optionally, the program can automatically generate a desktop shortcut for convenient access.
----
+Optionally, the program can automatically generate a desktop shortcut for convenient access.
+
 
 ### Installation:
 
