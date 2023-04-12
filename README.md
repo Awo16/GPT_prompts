@@ -37,9 +37,7 @@
    
    _Watch the demo video for complete examples._
 
-   #### DEMO: [![YouTube video demo]
-(https://img.youtube.com/vi/zGgqm7ftGv0/maxresdefault.jpg)]
-(https://www.youtube.com/watch?v=zGgqm7ftGv0)
+   #### DEMO: [![Watch the video](https://img.youtube.com/vi/zGgqm7ftGv0/maxresdefault.jpg)](https://youtu.be/zGgqm7ftGv0)
  
  [Youtube demo](https://youtu.be/zGgqm7ftGv0)
 
