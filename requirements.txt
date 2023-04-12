@@ -1,0 +1,11 @@
+elevenlabslib==0.4.1
+openai==0.27.2
+pyfiglet==0.8.post1
+pyshortcuts==1.8.3
+pytest==7.2.2
+python-dotenv==1.0.0
+pyttsx3==2.90
+rich==13.3.3
+SpeechRecognition==3.8.1
+pyaudio==0.2.13
+python-dotenv==1.0.0
