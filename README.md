@@ -32,7 +32,8 @@ Optionally, the program can automatically generate a desktop shortcut for conven
 ### Usage:
 
    Users can specify which of [_OpenAI's](https://openai.com) LLM models to use by passing the model name as a command line argument. If no command line argument is provided, default: gpt-3.5-turbo.
-   __Example:__ ```$: python3 gpt_prompts.py gpt-3.5-turbo```
+   __Example:__ 
+                ```$: python3 gpt_prompts.py gpt-3.5-turbo```
                 ```$: python3 gpt_prompts.py gpt-4```
    
    _Watch the demo video for complete examples._
