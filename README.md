@@ -37,7 +37,9 @@
    
    _Watch the demo video for complete examples._
 
-   #### DEMO: <iframe src=https://youtu.be/zGgqm7ftGv0 height=150px width=200px ></iframe>
+   #### DEMO: [![YouTube video demo]
+(https://img.youtube.com/vi/zGgqm7ftGv0/maxresdefault.jpg)]
+(https://www.youtube.com/watch?v=zGgqm7ftGv0)
  
  [Youtube demo](https://youtu.be/zGgqm7ftGv0)
 
