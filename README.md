@@ -16,12 +16,12 @@ Optionally, the program can automatically generate a desktop shortcut for conven
 
 ### Installation:
 
-   * To install __GPT_Prompts4__ all you need to do is, `git clone` this repository. Alternatively download the zip file here.
+   * To install __GPT_Prompts4__ all you need to do is, clone this repository with `git clone https://github.com/Awo16/GPT_prompts.git`. Alternatively download the zip file [here](https://github.com/Awo16/GPT_prompts/archive/refs/heads/master.zip).
 
    * On Mac, install PortAudio using [Homebrew](http://brew.sh/): `brew install portaudio`.
    (For enabling microphone support).
 
-   * you will need to run `pip install -r requirements.txt`.
+   * Finally you will need to run `pip install -r requirements.txt`.
 
 
 ### Configuration:
