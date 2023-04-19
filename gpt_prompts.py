@@ -2,6 +2,7 @@ from helpers import *
 from config.config import *
 from rich.console import Console
 import speech_recognition as sr
+from pick import pick
 import openai
 import sys
 import os
@@ -24,6 +25,7 @@ voices = VOICES
 
 # Add model.
 models = MODELS
+temperature = TEMP
 
 def main():
 # The __main()__ function first generates a formatted greeting using __ASCII__ art, 
@@ -32,14 +34,14 @@ def main():
 #  It uses a while loop to continue generating new responses based on user inputs, appending the system's and
 #  user's messages to a list, until the user prompts the chatbot to exit. 
 
-#  If any exceptions are raised by OpenAI's API (https://platform.openai.com), the program logs the error and exits gracefully.
+#  If any exceptions are raised by [_OpenAI's API_](https://openai.com), the program logs the error and exits gracefully.
 
     console = Console()
     messages = []
     
     if PATHS['SHORTCUT'] != "":
         if not os.path.exists(PATHS['SHORTCUT'] + "/shortcut.txt"):
-            shortcut(PATHS['SHORTCUT'] + "/gpt_prompts.py")
+            shortcut(PATHS['SHORTCUT'] + "/project.py")
             path = PATHS['SHORTCUT'] + "/shortcut.txt"
             with open(path, 'w') as f:
                 f.write(f'SHORTCUT = TRUE\nSELF = {path}')
@@ -55,8 +57,8 @@ def main():
     elif len(sys.argv) < 2:
         engine = models[0]
 
-    placeholder = greetFiglet("small", "GPT_Prompts_4")
-    greet = greetFiglet("slant", "GPT_Prompts_4")
+    placeholder = greetFiglet("small", "GPT_Prompts_3")
+    greet = greetFiglet("slant", "GPT_Prompts_3")
     console.print(
         f"[blue underline]Model: ==> {engine.upper()}[/]\n\n",
         f"{greet}",
@@ -69,27 +71,23 @@ def main():
         global SPEECH
         global SPEECH_ENGINE
         SPEECH = True
-        custom_voice = console.input("[green]Custom voice? {yes/no} ").strip()
-        if custom_voice.lower() in ["yes", "y"] or custom_voice.lower() in voices:
+        custom_q = console.input("[green]Custom voice? {yes/no} ").strip()
+        if custom_q.lower() in ["yes", "y"]:
             if API_KEYS['ELEVENLABS_API_KEY'] == "":
                 sys.exit(
                     "Usage: Please configure 'ELEVENLABS_API_KEY' in config.py to enable custom voices."
                 )
             global SPEECH_DEFAULT
             SPEECH_DEFAULT = False
-            if custom_voice.lower() in voices:
-                global CUSTOM_VOICE
-                CUSTOM_VOICE = custom_voice.capitalize()
-        speech_engine = (
-            console.input(
-                f"[green]Transcript engine: (Default: {SPEECH_ENGINE.upper()})\n"
-                + f"[bold green]Enter engine: {SPEECH_MODELS}[/] "
+            custom_voice, _ = pick(
+                voices,
+                "<--CHOOSE CUSTOM VOICE-->",
+                indicator="==>"
             )
-            .strip()
-            .lower()
-        )
-        if speech_engine in SPEECH_MODELS:
-            SPEECH_ENGINE = speech_engine
+            global CUSTOM_VOICE
+            CUSTOM_VOICE = custom_voice.capitalize()
+        speech_engine, _ = pick(SPEECH_MODELS, "<--CHOOSE SPEECH TRANSCRIPTION MODEL-->", indicator="==>") 
+        SPEECH_ENGINE = speech_engine
     else:
         pass
 
@@ -102,42 +100,42 @@ def main():
                 )
                 .strip()
             )
-            user_prompt = get_prompt(user_input, csv_path)
-            console.print(
-                f'[dim]{"=" * 100}[/]\n [bold yellow]==> {user_prompt["act"].upper()}[/]\n\n',
-                f'"[bold white]{user_prompt["prompt"]}[/]"\n [dim]{"=" * 100}[/]\n',
-                style="bold",
-                justify="center",
-            )
-            ask = console.input("[bold yellow]==> Confirm: [/]").strip()
-            messages.append({"role": "system", "content": user_prompt["prompt"]})
-            messages.append({"role": "user", "content": ask})
+            m = prompt_initialize(user_input)
+            for message in m:
+                messages.append(message)
             break
-
-        except EOFError:
-            console.print("[red underline]Chat Exited.[/]")
-            sys.exit(f"{placeholder}")
 
         except FileNotFoundError:
             suggestion = get_suggestion(user_input, csv_path)
             if len(suggestion) > 0:
-                console.print(
-                    "** Try one of the following ** 🧩",
-                    style="yellow underline"
+                suggestion.append('>>> GO BACK')
+                u_pick, _ = pick(
+                    suggestion,
+                    "** Try one of the following **",
+                    indicator="==>"
                 )
+                if u_pick == '>>> GO BACK':
+                    continue
+                else:
+                    m = prompt_initialize(u_pick)
+                    for message in m:
+                        messages.append(message)
+                    break
             else:
                 console.print(
                     "** No suggestions found ** ⛔",
                     style="red underline"
                 )
-            for keyword in suggestion:
-                console.print(f"[green]==>[/] [bold]{keyword}[/]")
-            continue
+                continue
 
     while True:
         try:
             with console.status("Thinking...", spinner="dots12"):
-                response = openai.ChatCompletion.create(model=engine, messages=messages)
+                response = openai.ChatCompletion.create(
+                    model=engine,
+                    messages=messages,
+                    temperature=temperature
+                )
 
             content = response["choices"][0]["message"]["content"]
             console.print(

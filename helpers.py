@@ -2,12 +2,36 @@ from config.config import PATHS
 from pyfiglet import Figlet
 from pyshortcuts import make_shortcut
 from elevenlabslib import ElevenLabsUser
+from rich.console import Console
 import speech_recognition as sr
 import pyttsx3
+import sys
 import openai
 import random
 import csv
 import os
+
+def prompt_initialize(input: str) -> list[dict]:
+    console = Console()
+    placeholder = greetFiglet("small", "GPT_Prompts_3")
+    messages = []
+    try:
+        user_prompt = get_prompt(input, PATHS['CSV'])
+        console.print(
+            f'[dim]{"=" * 100}[/]\n [bold yellow]==> {user_prompt["act"].upper()}[/]\n\n',
+            f'"[bold white]{user_prompt["prompt"]}[/]"\n [dim]{"=" * 100}[/]\n',
+            style="bold",
+            justify="center",
+        )
+        ask = console.input("[bold yellow]==> Confirm: [/]").strip()
+        messages.append({"role": "system", "content": user_prompt["prompt"]})
+        messages.append({"role": "user", "content": ask})
+        return messages
+    
+    except EOFError:
+        console.print("[red underline]Chat Exited.[/]")
+        sys.exit(f"{placeholder}")
+
 
 def shortcut(filepath=None):
     """
