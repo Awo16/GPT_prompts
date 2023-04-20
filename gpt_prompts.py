@@ -41,7 +41,7 @@ def main():
     
     if PATHS['SHORTCUT'] != "":
         if not os.path.exists(PATHS['SHORTCUT'] + "/shortcut.txt"):
-            shortcut(PATHS['SHORTCUT'] + "/project.py")
+            shortcut(PATHS['SHORTCUT'] + "/gpt_prompts.py")
             path = PATHS['SHORTCUT'] + "/shortcut.txt"
             with open(path, 'w') as f:
                 f.write(f'SHORTCUT = TRUE\nSELF = {path}')
@@ -57,8 +57,8 @@ def main():
     elif len(sys.argv) < 2:
         engine = models[0]
 
-    placeholder = greetFiglet("small", "GPT_Prompts_3")
-    greet = greetFiglet("slant", "GPT_Prompts_3")
+    placeholder = greetFiglet("small", "GPT_Prompts_4")
+    greet = greetFiglet("slant", "GPT_Prompts_4")
     console.print(
         f"[blue underline]Model: ==> {engine.upper()}[/]\n\n",
         f"{greet}",
