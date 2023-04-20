@@ -44,9 +44,7 @@
    
    _Watch the demo video for complete examples._
 
-   #### DEMO: <a href="http://www.youtube.com/watch?feature=player_embedded&v=zGgqm7ftGv0
-   " target="_blank"><img src="http://img.youtube.com/vi/zGgqm7ftGv0/0.jpg" 
-   alt="Youtube video demo" width="240" height="180" border="10" /></a>
+   #### DEMO: [![Watch the video](https://img.youtube.com/vi/zGgqm7ftGv0/maxresdefault.jpg)](https://youtu.be/zGgqm7ftGv0)
 
    [Youtube Demo](https://youtu.be/zGgqm7ftGv0)
 
