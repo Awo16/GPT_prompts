@@ -61,22 +61,22 @@
    For example:
                if user wants to activate speech recognition by typing `y` or `yes`.
 
-               ![Screenshot-2023-04-19-at-7-49-21-PM.png](https://i.postimg.cc/Bn7xhbrD/Screenshot-2023-04-19-at-7-49-21-PM.png)
+![Screenshot-2023-04-19-at-7-49-21-PM.png](https://i.postimg.cc/Bn7xhbrD/Screenshot-2023-04-19-at-7-49-21-PM.png)
 
-               After inputting the command the user will see a menu like this:
+After inputting the command the user will see a menu like this:
 
-               [![Screenshot-2023-04-19-at-7-49-37-PM.png](https://i.postimg.cc/RVySXzPh/Screenshot-2023-04-19-at-7-49-37-PM.png)](https://postimg.cc/QHgZdvZZ)
+[![Screenshot-2023-04-19-at-7-49-37-PM.png](https://i.postimg.cc/RVySXzPh/Screenshot-2023-04-19-at-7-49-37-PM.png)](https://postimg.cc/QHgZdvZZ)
 
-               Then the user will select a speech engine:
+Then the user will select a speech engine:
 
-               [![Screenshot-2023-04-19-at-7-50-04-PM.png](https://i.postimg.cc/g0GfKSPr/Screenshot-2023-04-19-at-7-50-04-PM.png)](https://postimg.cc/fVg2zvyh)
+[![Screenshot-2023-04-19-at-7-50-04-PM.png](https://i.postimg.cc/g0GfKSPr/Screenshot-2023-04-19-at-7-50-04-PM.png)](https://postimg.cc/fVg2zvyh)
 
-               This feature also work with keyword suggestions. For example if a user inputs the letter `a`:
+This feature also work with keyword suggestions. For example if a user inputs the letter `a`:
 
-               [![Screenshot-2023-04-19-at-7-50-31-PM.png](https://i.postimg.cc/pVnRrSVt/Screenshot-2023-04-19-at-7-50-31-PM.png)](https://postimg.cc/SjqwtDzZ)
+[![Screenshot-2023-04-19-at-7-50-31-PM.png](https://i.postimg.cc/pVnRrSVt/Screenshot-2023-04-19-at-7-50-31-PM.png)](https://postimg.cc/SjqwtDzZ)
 
-               The suggestion feature will provide suggestions via select menu:
+The suggestion feature will provide suggestions via select menu:
 
-               [![Screenshot-2023-04-19-at-7-51-31-PM.png](https://i.postimg.cc/MKdPS6kZ/Screenshot-2023-04-19-at-7-51-31-PM.png)](https://postimg.cc/YhLfNwqT)
+[![Screenshot-2023-04-19-at-7-51-31-PM.png](https://i.postimg.cc/MKdPS6kZ/Screenshot-2023-04-19-at-7-51-31-PM.png)](https://postimg.cc/YhLfNwqT)
 
 
