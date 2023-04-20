@@ -61,7 +61,7 @@
    For example:
                if user wants to activate speech recognition by typing `y` or `yes`.
 
-               [![Screenshot-2023-04-19-at-7-49-21-PM.png](https://i.postimg.cc/Bn7xhbrD/Screenshot-2023-04-19-at-7-49-21-PM.png)](https://postimg.cc/w1JyMqTT)
+               ![Screenshot-2023-04-19-at-7-49-21-PM.png](https://i.postimg.cc/Bn7xhbrD/Screenshot-2023-04-19-at-7-49-21-PM.png)
 
                After inputting the command the user will see a menu like this:
 
