@@ -30,8 +30,6 @@ DEFAULTS = {
 # Add custom voices.
 
 VOICES = [
-    "vision",
-    "sunset",
     "bella",
     "adam",
     "antoni",
