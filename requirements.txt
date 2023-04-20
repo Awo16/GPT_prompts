@@ -9,3 +9,4 @@ rich==13.3.3
 SpeechRecognition==3.8.1
 pyaudio==0.2.13
 python-dotenv==1.0.0
+pick==2.2.0

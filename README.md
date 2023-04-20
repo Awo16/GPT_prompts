@@ -23,11 +23,18 @@ Optionally, the program can automatically generate a desktop shortcut for conven
 
    * Finally you will need to run `pip install -r requirements.txt`.
 
+   * configure the program by adding required data in the `config.py` file.
+
+   * make sure you have a valid [_OpenAI API key_](https://platform.openai.com).
+
+   * optionally you can add a valid [_ElevenLabs API key_](https://beta.elevenlabs.io).
+
 
 ### Configuration:
 
    In a file called `config.py`, you can configure the program with your API keys and add necessary 
    file paths for the program to run correctly. You can also configure the custom voices if desired.
+   Default voices from [__ElevenLabs__](https://beta.elevenlabs.io) are provided out of the box.
 
 ### Usage:
 
@@ -40,9 +47,38 @@ Optionally, the program can automatically generate a desktop shortcut for conven
    _Watch the demo video for complete examples._
 
    #### DEMO: [![Watch the video](https://img.youtube.com/vi/zGgqm7ftGv0/maxresdefault.jpg)](https://youtu.be/zGgqm7ftGv0)
- 
- [Youtube demo](https://youtu.be/zGgqm7ftGv0)
+
+
+[Youtube Demo](https://youtu.be/zGgqm7ftGv0)
+
 
    Finally, if the user wants to __Exit__ the chat, they can type `exit` to end the chat or `CTRL + D`.
+
+### Updates:
+
+   * Added selectable menu for better user interaction.
+
+   * Added temperature parameter in the `config.py` file.
+
+   For example:
+               if user wants to activate speech recognition by typing `y` or `yes`.
+
+![Screenshot-2023-04-19-at-7-49-21-PM.png](https://i.postimg.cc/Bn7xhbrD/Screenshot-2023-04-19-at-7-49-21-PM.png)
+
+After inputting the command the user will see a menu like this:
+
+[![Screenshot-2023-04-19-at-7-49-37-PM.png](https://i.postimg.cc/RVySXzPh/Screenshot-2023-04-19-at-7-49-37-PM.png)](https://postimg.cc/QHgZdvZZ)
+
+Then the user will select a speech engine:
+
+[![Screenshot-2023-04-19-at-7-50-04-PM.png](https://i.postimg.cc/g0GfKSPr/Screenshot-2023-04-19-at-7-50-04-PM.png)](https://postimg.cc/fVg2zvyh)
+
+This feature also work with keyword suggestions. For example if a user inputs the letter `a`:
+
+[![Screenshot-2023-04-19-at-7-50-31-PM.png](https://i.postimg.cc/pVnRrSVt/Screenshot-2023-04-19-at-7-50-31-PM.png)](https://postimg.cc/SjqwtDzZ)
+
+The suggestion feature will provide suggestions via select menu:
+
+[![Screenshot-2023-04-19-at-7-51-31-PM.png](https://i.postimg.cc/MKdPS6kZ/Screenshot-2023-04-19-at-7-51-31-PM.png)](https://postimg.cc/YhLfNwqT)
 
 
