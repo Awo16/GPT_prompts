@@ -11,17 +11,17 @@
 
    The program can also generate speech-to-text and text-to-speech responses allowing user to interact with the chat bot via voice. This feature is has a built-in or default voice interface, however the program has support for users who want to create custom voice responses using [__ElevenLabs API__](https://beta.elevenlabs.io).
 
-   Optionally, the program can automatically generate a desktop shortcut for convenient access.
----
+Optionally, the program can automatically generate a desktop shortcut for convenient access.
+
 
 ### Installation:
 
-   * To install __GPT_Prompts4__ all you need to do is, `git clone` this repository. Alternatively download the zip file here.
+   * To install __GPT_Prompts4__ all you need to do is, clone this repository with `git clone https://github.com/Awo16/GPT_prompts.git`. Alternatively download the zip file [here](https://github.com/Awo16/GPT_prompts/archive/refs/heads/master.zip).
 
    * On Mac, install PortAudio using [Homebrew](http://brew.sh/): `brew install portaudio`.
    (For enabling microphone support).
 
-   * you will need to run `pip install -r requirements.txt`.
+   * Finally you will need to run `pip install -r requirements.txt`.
 
    * configure the program by adding required data in the `config.py` file.
 
@@ -39,14 +39,18 @@
 ### Usage:
 
    Users can specify which of [_OpenAI's](https://openai.com) LLM models to use by passing the model name as a command line argument. If no command line argument is provided, default: gpt-3.5-turbo.
-   __Example:__ ```$: python3 gpt_prompts.py gpt-3.5-turbo```
+   
+   __Example:__ 
+                ```$: python3 gpt_prompts.py gpt-3.5-turbo```
                 ```$: python3 gpt_prompts.py gpt-4```
    
    _Watch the demo video for complete examples._
 
    #### DEMO: [![Watch the video](https://img.youtube.com/vi/zGgqm7ftGv0/maxresdefault.jpg)](https://youtu.be/zGgqm7ftGv0)
 
-   [Youtube Demo](https://youtu.be/zGgqm7ftGv0)
+
+[Youtube Demo](https://youtu.be/zGgqm7ftGv0)
+
 
    Finally, if the user wants to __Exit__ the chat, they can type `exit` to end the chat or `CTRL + D`.
 
