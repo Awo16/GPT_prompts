@@ -13,7 +13,7 @@ import os
 
 def prompt_initialize(input: str) -> list[dict]:
     console = Console()
-    placeholder = greetFiglet("small", "GPT_Prompts_3")
+    placeholder = greetFiglet("small", "GPT_Prompts_4")
     messages = []
     try:
         user_prompt = get_prompt(input, PATHS['CSV'])
